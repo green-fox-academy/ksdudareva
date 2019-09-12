@@ -4,6 +4,9 @@ export {};
 
 let a: number = 3;
 // make it bigger by 10
+a = a*10;
+console.log(a);
+
 
 console.log(a);
 
