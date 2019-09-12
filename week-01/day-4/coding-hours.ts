@@ -9,4 +9,4 @@ console.log(dailyCode*semesterLength*workDays);
 
 let workHoursWeekly = 52;
 
-console.log(dailyCode)
+console.log(dailyCode*workDays/workHoursWeekly*100);
