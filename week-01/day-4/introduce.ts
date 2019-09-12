@@ -3,5 +3,5 @@
 //introduce yourself
 
 console.log('Ksenia');
-console.log('31');
+console.log('28');
 console.log('1.74');

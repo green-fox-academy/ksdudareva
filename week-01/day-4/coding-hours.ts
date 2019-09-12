@@ -1,6 +1,5 @@
 'use strict';
 
-//coding hours
 
 let dailyCode = 6;
 let semesterLength = 17;
