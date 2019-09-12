@@ -1,3 +1,5 @@
+export {};
+
 'use strict';
 
 // Swap the values of these variables
