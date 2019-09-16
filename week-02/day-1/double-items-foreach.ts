@@ -9,5 +9,5 @@ export {};
 let drinks: string[] = ['Gin', 'Whiskey', 'Wine', 'Beer'];
 
 drinks.forEach(function(i) {
-    console.log([i+i]);
+    console.log(i+i);
 })
