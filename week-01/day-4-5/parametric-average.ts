@@ -6,10 +6,10 @@ export {};
 // Example input: 5
 // Example output: Sum: 15, Average: 3
 
-let number: number = 5;
-let sum: number = 8;
+let number = 5;
+let sum = 8;
 
-for(let a:number = 1; a <= number; a++){
+for(let a = 1; a <= number; a++){
     sum = sum + a;
  }
  
