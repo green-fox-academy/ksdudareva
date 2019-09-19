@@ -8,8 +8,9 @@ export {};
 // -  Greet `nameToGreet`
 
 let nameToGreet: string = "Green Fox";
-greet(nameToGreet);
-function greet (name: string) {
-   console.log("Greetings, dear, " + name);
-} 
 
+function greet(i) {
+   return "Greetings, dear " + i + "!";
+}
+
+console.log(greet(nameToGreet));

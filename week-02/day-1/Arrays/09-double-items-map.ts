@@ -8,9 +8,6 @@ export {};
 
 let drinks: string[] = ['Gin', 'Whiskey', 'Wine', 'Beer'];
 
-drinks = drinks.map(function(i) {
-
-    return i + i;
-});
-
-console.log(drinks);
+drinks.map(function add (i) {
+    console.log(i+i);
+})

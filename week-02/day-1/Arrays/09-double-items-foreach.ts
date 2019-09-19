@@ -7,7 +7,6 @@ export {};
 // It should print: ['GinGin', 'WhiskeyWhiskey', 'WineWine', 'BeerBeer']`
 
 let drinks: string[] = ['Gin', 'Whiskey', 'Wine', 'Beer'];
-
-drinks.forEach(function(i) {
-    console.log(i+i);
-})
+ drinks.forEach(function double (i) {
+     console.log(i+i);
+ })

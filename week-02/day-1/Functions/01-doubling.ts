@@ -8,8 +8,7 @@ export {};
 
 var baseNum: number = 123;
 
-function doubling (num: number) {
-    return num * 2;
-} 
-
+function doubling (num) {
+    return num*2;
+}
 console.log(doubling(baseNum));

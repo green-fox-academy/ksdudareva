@@ -9,8 +9,7 @@ export {};
 let ai: number[] = [3, 4, 5, 6, 7];
 let aiSum: number = 0;
 
-ai.forEach(function(i) {
-    aiSum = aiSum + i;
-})
+ai.forEach(function sum(i) {
+    aiSum = aiSum +i;
+});
 console.log(aiSum);
-

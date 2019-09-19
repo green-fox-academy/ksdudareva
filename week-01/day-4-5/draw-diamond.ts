@@ -24,7 +24,7 @@ for (let i = lineCount-3; i > 0; i--) {
 
 for (let i = lineCount-4; i > 0; i--) {
     let star: string = "";
-    for (let j = 0; j < 5; j+2) {
+    for (let j = 0; j <= 5; j++) {
         star += "*";
     }
     space += " ";

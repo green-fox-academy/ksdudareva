@@ -8,6 +8,6 @@ export {};
 
 let animals: string[] = ["koal", "pand", "zebr"];
 
-animals.forEach(function(item) {
-    console.log(item + "a");
-});
+animals.forEach(function add (i) {
+    console.log(i+"a");
+})
