@@ -12,7 +12,6 @@ console.log(b);
 let temp: number = a;
 
 a = b;
-
 b = temp;
 
 console.log(a);

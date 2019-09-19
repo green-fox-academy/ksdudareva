@@ -12,5 +12,5 @@ let rectColor:string [] = ['red', 'blue', 'green', 'yellow'];
 
 for (let i:number = 0; i < 4; i++) {
     ctx.fillStyle = rectColor[i];
-    ctx.fillRect(Math.floor((Math.random() * 100)), Math.floor((Math.random() * 100)), Math.floor((Math.random() * 100)), Math.floor((Math.random() * 100)));
+    ctx.fillRect(Math.floor((Math.random() * 200)), Math.floor((Math.random() * 200)), Math.floor((Math.random() * 200)), Math.floor((Math.random() * 200)));
 }
