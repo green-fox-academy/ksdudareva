@@ -5,18 +5,14 @@ const ctx = canvas.getContext('2d');
 
 //do not touch the code above the line
 
-function linesPlay(x, y, xx, yy, c) {
+function envelope(x, y, xx, yy) {
     ctx.beginPath();
-    ctx.strokeStyle = c;
+    ctx.strokeStyle = "#34c6eb";
     ctx.moveTo(x, y);
     ctx.lineTo(xx, yy);
     ctx.stroke();
 }
 
-for (let a = 0; a < canvas.height; a += 30) {
-    linesPlay(a, canvas.height, 0, a, "green")
-}
-
-for (let b = 0; b < canvas.height; b += 30) {
-    linesPlay(b, 0, canvas.height, b, "purple")
+for (let a = 0; a < canvas.height / 2; a += 15) {
+    envelope(canvas.height / 2 + a, canvas.height / 2, canvas.height / 2, a);
 }
