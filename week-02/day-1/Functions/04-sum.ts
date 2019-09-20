@@ -5,11 +5,11 @@ export {};
 // Write a function called `sum` that returns the sum of numbers from zero to the given parameter
 
 
-function sum (num: number) {
-    let sum:number = 0;
-    for(let r:number = 0; r < num; r++) {
-        sum += r;
+function sum (num) {
+    let sum = 0;
+    for (let i = 0; i < num; i++) {
+        sum += i;
     }
     return sum;
 }
-console.log(sum(10));
+console.log(sum(5));

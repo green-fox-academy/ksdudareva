@@ -9,7 +9,7 @@ export {};
 
 let typo: string = "Chinchill";
 
-function appendAFunc(name: string) {
-    return name + "a";
+function appendAFunc (string) {
+    return string +"a";
 }
 console.log(appendAFunc(typo));
