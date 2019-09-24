@@ -14,22 +14,18 @@ function envelope(x, y, xx, yy) {
 }
 
 for (let a = 20; a < canvas.height / 2; a += 20) {
-    ctx.strokeStyle = "blue"
     envelope(canvas.height / 2, canvas.height / 2 - a, a, canvas.height / 2);
 }
 
 for (let a = 0; a < canvas.height / 2; a += 20) {
-    ctx.strokeStyle = "green"
     envelope(canvas.height / 2 + a, canvas.height / 2, canvas.height / 2, a);
 }
 
 for (let a = 20; a < canvas.height / 2; a += 20) {
-    ctx.strokeStyle = "black"
     envelope(canvas.height / 2, canvas.height / 2 + a, a, canvas.height / 2);
 }
 
 for (let a = 20; a <= canvas.height / 2; a += 20) {
-    ctx.strokeStyle = "red"
     envelope(canvas.height / 2, canvas.height / 2 + a, canvas.height - a, canvas.height/2)
 }
 
