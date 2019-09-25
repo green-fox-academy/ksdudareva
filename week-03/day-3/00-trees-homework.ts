@@ -1,3 +1,5 @@
+import { Z_FILTERED } from "zlib";
+
 let chestnut = {
     type: 'chestnut tree',
     leafColor: 'red',
@@ -33,3 +35,12 @@ let willow = {
     age: '30',
     sex: 'male'
 }
+
+let trees: any[] = [fig, willow]
+let youngTrees = trees.map(function(element) {
+    if(element.age > 10) {
+        return element; 
+    }
+    });
+
+    filter(function(element)) 
