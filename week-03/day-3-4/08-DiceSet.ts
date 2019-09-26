@@ -40,9 +40,9 @@ class DiceSet {
 let diceSet = new DiceSet();
 
 diceSet.roll();
-for (let i = 0; i < diceSet.numOfDices; i++) {
-    while (diceSet.getCurrent(i) != 6) {
-        diceSet.reroll(i);
+for (let e: number = 0; e < diceSet.numOfDices; e++) {
+    while (diceSet.getCurrent(e) != 6) {
+        diceSet.reroll(e);
     }
 }
 
