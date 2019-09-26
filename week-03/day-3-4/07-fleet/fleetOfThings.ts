@@ -5,11 +5,11 @@ let fleet = new Fleet();
 
 // -  You have the `Thing` class
 // -  You have the `Fleet` class
-// -  Create the `FleetOfThings` class with a `main` method
+// -  Create the `FleetOfThings` class 
 // -  Download those, use those
-// -  In the `main` method create a fleet
+// -  create a fleet
 // -  Achieve this output:
-//  Crete a fleet of things to have this output:
+//  Create a fleet of things to have this output:
 
 // 1. [ ] Get milk
 // 2. [ ] Remove the obstacles
@@ -22,3 +22,20 @@ let task1 = new Thing ('Get milk');
 let task2 = new Thing ('Remove the obstacles');
 let task3 = new Thing ('Stand up');
 let task4 = new Thing ('Eat lunch');
+
+task4.complete();
+task3.complete();
+
+let myFleet = new Fleet();
+
+myFleet.add(task1);
+myFleet.add(task2);
+myFleet.add(task3);
+myFleet.add(task4);
+
+let index: number = 1;
+let array : Thing [] = myFleet.getThings();
+array.forEach(element => {
+    console.log(index.toString() + " " + (element.getCompleted() ? "[X] " : "[ ] ") + element.getName());
+    index++;
+});
