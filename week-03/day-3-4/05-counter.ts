@@ -23,7 +23,7 @@ class Counter {
         return this._integer;
     }
 
-    public reset (){
+    public reset(){
         return this._integer = 0;
     }
     
