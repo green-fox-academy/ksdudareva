@@ -23,4 +23,3 @@ let dominoes = initializeDominoes();
 /** eg: [2, 4], [4, 3], [3, 5] ... */
 
 print(dominoes);
-© 2019 GitHub, Inc.

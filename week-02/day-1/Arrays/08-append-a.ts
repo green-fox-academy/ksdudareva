@@ -1,4 +1,4 @@
-export {};
+export { };
 
 'use strict';
 
@@ -6,8 +6,8 @@ export {};
 //    with the following content: `["koal", "pand", "zebr"]`
 // -  Add all elements an `"a"` at the end
 
-let animals: string[] = ["koal", "pand", "zebr"];
-
-animals.forEach(function add (i) {
-    console.log(i+"a");
+let animals: string[] = ["koal", "pand", "zebr"];
+let aString: string = "a";
+animals.forEach(function add(i) {
+    console.log(i + aString);
 })

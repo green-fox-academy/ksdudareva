@@ -1,6 +1,6 @@
 class Thing {
     private name: string;
-    private completed: boolean;
+    private completed: boolean = false;
   
     constructor(name: string) {
       this.name = name;

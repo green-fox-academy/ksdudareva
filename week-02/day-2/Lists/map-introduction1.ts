@@ -50,10 +50,3 @@ Object.keys(myMap).forEach(function(i) {
 });
 
 console.log(Object.keys(myMap));
-
-{
-    "compilerOptions": {
-      "lib": ["dom","es2018"]
-    }
-  }
-  

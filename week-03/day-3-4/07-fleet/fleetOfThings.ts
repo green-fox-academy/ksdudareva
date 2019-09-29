@@ -36,6 +36,6 @@ myFleet.add(task4);
 let index: number = 1;
 let array : Thing [] = myFleet.getThings();
 array.forEach(element => {
-    console.log(index.toString() + " " + (element.getCompleted() ? "[X] " : "[ ] ") + element.getName());
+    console.log(index + " " + (element.getCompleted() ? "[X] " : "[ ] ") + element.getName());
     index++;
 });

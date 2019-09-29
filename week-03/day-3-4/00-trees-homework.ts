@@ -42,5 +42,3 @@ let youngTrees = trees.map(function(element) {
         return element; 
     }
     });
-
-    filter(function(element)) 

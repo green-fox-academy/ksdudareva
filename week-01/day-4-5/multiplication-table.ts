@@ -1,9 +1,5 @@
 'use strict';
 
-let number: number = 15;
-
-
-//
 // 1 * 15 = 15
 // 2 * 15 = 30
 // 3 * 15 = 45
@@ -15,6 +11,8 @@ let number: number = 15;
 // 9 * 15 = 135
 // 10 * 15 = 150
 
-for(let i: number = 1; i <= 10; i++) {
-    console.log(i + " * " + number + " = " + (i*15));
+let number: number = 15;
+
+for (let i: number = 1; i <=10; i++) {
+    console.log(i + " * " + 15 + " = " + i*15);
 }

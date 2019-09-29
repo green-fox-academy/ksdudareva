@@ -7,9 +7,8 @@ export {};
 // *hint: use a loop, console.log(integers) won't cut it
 // -  bonus for using the correct built in array method
 
-let integers = [4, 5, 6, 7];
+let integers: number[] = [4, 5, 6, 7];
 
-for (let i = 0; i < integers.length; i++) {
-
+for (let i: number = 0; i < integers.length; i++) {
     console.log(integers[i]);
 }
