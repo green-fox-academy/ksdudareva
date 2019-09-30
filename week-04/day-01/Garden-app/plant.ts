@@ -13,12 +13,25 @@ export class Plant{
         this._waterAmmount = 0;
 	}
 
-    water(waterAmount: number): void {
+    public water(waterAmount: number): void {
         this._waterAmmount += waterAmount * this._absorbtion;
     }
     
-    needsWater(): boolean {
+    public needsWater(): boolean {
         return this._waterNeeded >= this._waterAmmount;
+    }
+
+    public type(): string {
+        return " ";
+    }
+
+    public waterCheck(): void {
+        if (this.needsWater) {
+            console.log("The " + this._color + " " + this.type() + " needs water");
+        } else {
+            console.log("The " + this._color + " " + this.type() + " doesnt need water.");
+        }
+
     }
     
 }
