@@ -11,7 +11,7 @@ export class Garden {
 		this._plantList = [];
 	}
 
-	public getPlantList(){
+	public getPlantList() {
 		return this._plantList;
 	}
 
@@ -28,14 +28,19 @@ export class Garden {
 		this._plantList.forEach(element => {
 			if (element.needsWater()) {
 				array.push(element);
-			} 
-		});
-			array.forEach(element => {
-				element.water(amount / array.length);
-				element.waterCheck();
 			}
-				);			
-		}
+		});
+		array.forEach(element => {
+			element.water(amount / array.length);
 
+		});
 	}
+
+	public status(): void{
+		this._plantList.forEach(element => {
+			element.waterCheck();
+		})
+	}
+
+}
 

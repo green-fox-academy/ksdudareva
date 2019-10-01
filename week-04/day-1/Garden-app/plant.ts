@@ -26,7 +26,7 @@ export class Plant{
     }
 
     public waterCheck(): void {
-        if (this.needsWater) {
+        if (this.needsWater()) {
             console.log("The " + this._color + " " + this.type() + " needs water");
         } else {
             console.log("The " + this._color + " " + this.type() + " doesnt need water.");

@@ -1,6 +1,6 @@
 'use strict';
 
-import { Plant } from './plant';
+
 import { Tree } from './tree';
 import { Flower } from './flower';
 import { Garden } from './garden';
@@ -15,9 +15,14 @@ let garden = new Garden();
 garden.addFlower(flowerBlue);
 garden.addFlower(flowerYellow);
 garden.addTree(treePurple);
-// garden.addTree(treeOrange);
+garden.addTree(treeOrange);
+
+garden.status();
 
 garden.waterPlants(40);
 
+garden.status();
+
 garden.waterPlants(70);
-console.log(garden.getPlantList().length);
+
+garden.status();
