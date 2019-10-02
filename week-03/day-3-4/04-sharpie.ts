@@ -6,18 +6,30 @@
 // which decreases inkAmount
 
 export class Sharpie {
-    public _color: string;
-    public _width: number;
-    _inkAmount: number;
+    private _color: string;
+    private _width: number;
+    private _inkAmount: number;
 
-    constructor (_color, _width, _inkAmount?) {
-        this._color = _color;
-        this._width = _width;
-        this._inkAmount = 100;
+    constructor (color: string, width: number, inkAmount: number = 100) {
+        this._color = color;
+        this._width = width;
+        this._inkAmount = inkAmount;
     }
 
     public use() {
         this._inkAmount -= 10;
+    }
+
+    public getColor() {
+        return this._color;
+    }
+
+    public getWidth() {
+        return this._width;
+    }
+
+    public getInkamount() {
+        return this._inkAmount;
     }
 }
 
@@ -25,4 +37,4 @@ let pinkSharpie = new Sharpie ('blue', 1.5);
 
 pinkSharpie.use();
 
-console.log(pinkSharpie._inkAmount);
+console.log(pinkSharpie.getInkamount());
