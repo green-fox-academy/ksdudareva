@@ -5,7 +5,7 @@
 // We can use() the sharpie objects
 // which decreases inkAmount
 
-class Sharpie {
+export class Sharpie {
     public _color: string;
     public _width: number;
     _inkAmount: number;
