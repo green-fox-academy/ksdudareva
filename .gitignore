@@ -1,0 +1,13 @@
+.DS_Store
+package-lock.json
+node_modules/
+
+.DS_Store
+week-01/.DS_Store
+week-01/day-3/.DS_Store
+week-02/.DS_Store
+week-02/day-1/.DS_Store
+week-02/day-2/.DS_Store
+week-02/day-3/.DS_Store
+week-04/.DS_Store
+week-04/day-1/.DS_Store
