@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    background-color: #FFD62A;
+    height: 300px;
+    padding: 0px;
+    /* justify-content: space-evenly; */
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;
+}
+
+.item {
+    align-self: center;
+    background-color: #B02AFF;
+    width: 100px;
+    height: 100px;
+}
+
