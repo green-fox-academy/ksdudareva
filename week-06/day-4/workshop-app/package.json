@@ -1,0 +1,15 @@
+{
+  "name": "workshop-app",
+  "version": "1.0.0",
+  "description": "week 6, day 4 workshop task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ksenia dudareva",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1"
+  }
+}
