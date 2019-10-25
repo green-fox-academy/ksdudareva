@@ -21,7 +21,7 @@ const imageList = [
   { url: "4.jpg", text: 'Vincent van Gogh, 1889', moreText: "Wheatfield with Cypresses" },
   { url: "5.jpg", text: 'Vincent van Gogh, 1890', moreText: "Poppy Field" },
   { url: "6.jpg", text: 'Vincent van Gogh, 1890', moreText: "Almond Blossoms" }
-]
+];
 
 // start express app on port 3000
 app.listen(PORT, () => {

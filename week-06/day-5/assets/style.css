@@ -39,12 +39,13 @@
 
 .small:hover{
     transform: scale(2);
+    transition-duration: 300ms;
 }
 
 button {
     background-color: white;
     font-weight: bold;
-    width: 50px;
+    width: 70px;
 }
 
 .next {
