@@ -1,0 +1,52 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(#9F9F9F, #FEFEFE);
+    align-items: center;
+    height: 700px;
+    margin-top: 50px;
+}
+
+.maincontent {
+    display:flex;
+    justify-content: center;
+    box-shadow: 10px 10px 26px 12px rgba(0,0,0,0.50);
+}
+
+.currentImage {
+    display:flex;
+}
+
+.caption {
+    position:absolute;
+    color: white;
+    align-self: flex-end;
+    background: rgba(204, 204, 204, 0.5);
+    width: 17%;
+}
+
+
+.small {
+    margin-top: 35px;
+    margin-right: 35px;
+    align-self: center;
+    width:45px;
+    height: 45px;
+    box-shadow: 10px 10px 17px -12px rgba(0,0,0,0.75);
+    border: 5px solid;
+    border-image: linear-gradient(90deg, #9F9F9F, #FEFEFE) 1;
+}
+
+.small:hover{
+    transform: scale(2);
+}
+
+button {
+    background-color: white;
+    font-weight: bold;
+    width: 50px;
+}
+
+.next {
+    transform: scaleX(-1);
+}

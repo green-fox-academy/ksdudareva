@@ -1,0 +1,25 @@
+.head  {
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+
+}
+
+body {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: center;
+}
+
+.container {
+    display: inline-block;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+}
+
+
+

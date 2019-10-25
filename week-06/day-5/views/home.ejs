@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vincent van Gogh gallery</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class='body'>
+    <div class='maincontent'>
+        <button class='previous'> <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNC45MDYiIGhl%0D%0AaWdodD0iMjIuNzUiIHZpZXdCb3g9IjAgMCAxNC45MDYgMjIuNzUiPgogIDxkZWZzPgogICAgPHN0%0D%0AeWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICM0ZTRlNGU7CiAgICAgICAgZmlsbC1y%0D%0AdWxlOiBldmVub2RkOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cGF0aCBpZD0i%0D%0AU2hhcGVfM19jb3B5IiBkYXRhLW5hbWU9IlNoYXBlIDMgY29weSIgY2xhc3M9ImNscy0xIiBkPSJN%0D%0AMTI5LjAxLDMxMS4xMDdhMi40NSwyLjQ1LDAsMCwxLTMuNTM2LDBMMTE0Ljg2OCwzMDAuNWwxMC42%0D%0AMDYtMTAuNjA3YTIuNSwyLjUsMCwxLDEsMy41MzYsMy41MzZsLTcuMDcxLDcuMDcxLDcuMDcxLDcu%0D%0AMDcxQTIuNDQ5LDIuNDQ5LDAsMCwxLDEyOS4wMSwzMTEuMTA3WiIgdHJhbnNmb3JtPSJ0cmFuc2xh%0D%0AdGUoLTExNC44NzUgLTI4OS4xMjUpIi8+Cjwvc3ZnPgo=" /> </button>
+        <div class='currentImage'>
+            <img class='main' src=<%= imageList[0].url %> height=450px width=900px>
+            <div class='caption'>
+                <h2 class='moreText'><%= imageList[0].moreText %></h2>
+                <span class='theText'><%= imageList[0].text %></span>
+            </div>
+        </div>
+        <button class='next'> <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNC45MDYiIGhl%0D%0AaWdodD0iMjIuNzUiIHZpZXdCb3g9IjAgMCAxNC45MDYgMjIuNzUiPgogIDxkZWZzPgogICAgPHN0%0D%0AeWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICM0ZTRlNGU7CiAgICAgICAgZmlsbC1y%0D%0AdWxlOiBldmVub2RkOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwvZGVmcz4KICA8cGF0aCBpZD0i%0D%0AU2hhcGVfM19jb3B5IiBkYXRhLW5hbWU9IlNoYXBlIDMgY29weSIgY2xhc3M9ImNscy0xIiBkPSJN%0D%0AMTI5LjAxLDMxMS4xMDdhMi40NSwyLjQ1LDAsMCwxLTMuNTM2LDBMMTE0Ljg2OCwzMDAuNWwxMC42%0D%0AMDYtMTAuNjA3YTIuNSwyLjUsMCwxLDEsMy41MzYsMy41MzZsLTcuMDcxLDcuMDcxLDcuMDcxLDcu%0D%0AMDcxQTIuNDQ5LDIuNDQ5LDAsMCwxLDEyOS4wMSwzMTEuMTA3WiIgdHJhbnNmb3JtPSJ0cmFuc2xh%0D%0AdGUoLTExNC44NzUgLTI4OS4xMjUpIi8+Cjwvc3ZnPgo=" /> </button>
+    </div>
+    <div class='allImages'>
+        <% for (let i = 0; i < imageList.length; i++){ %>
+        <img class='small' src=<%= imageList[i].url %>>
+        <% } %>
+    </div>
+    <script src='home.js' type='module' async defer> </script>
+</body>
+
+</html>

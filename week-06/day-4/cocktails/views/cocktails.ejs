@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cocktail menu</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+
+<body>
+    <div class="alcohol">
+        <h1>Cocktails</h1>
+
+        <ul class="list">
+            <% for(let i = 0; i < cocktails.length; i++) { %>
+            <li>
+                <div class="container">
+                    <h2><%= cocktails[i].name %></h2>
+                    <p><%= cocktails[i].contains %></p>
+                </div>
+                <h4><%= cocktails[i].price %></h4>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+</body>
+
+</html>
