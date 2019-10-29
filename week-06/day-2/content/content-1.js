@@ -9,6 +9,7 @@
 //     everyParagraph[i].textContent = lastParagraph;
 // }
 
+
 //     2)  Do the same again, but you should keep the cat strong.
 
 let lastParagraph = document.querySelector('.animals').innerHTML;
