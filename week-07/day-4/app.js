@@ -7,14 +7,14 @@ const tableName = "posts";
 const app = express();
 const PORT = 8080;
 
-var connection = mysql.createConnection({
+var conn = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : 'password',
   database : databaseName
 });
 
-connection.connect((err) => {
+conn.connect((err) => {
     if (err) {
         console.log(err);
         return;
@@ -34,9 +34,19 @@ app.get('/hello', (req, res) => {
     res.send('Hello World!');
   });
 
+let output = {};
 
-
-
+app.get('/posts', (req, res) => {
+    conn.query('SELECT * FROM posts;', function(err, rows) {
+        if (err) {
+          res.status(500).send('Database error');
+          return;
+        }
+        output = {"posts": rows};
+    res.status(200);
+    res.send(output);
+})
+});
   
 
 app.listen(PORT, () => {
