@@ -112,23 +112,23 @@ app.post('/arrays', jsonParser, (req, res) => {
     res.send(output);
 });
 
-app.post('/arrays', jsonParser, (req, res) => {
-    let output = {};
-    let response = req.body;
-    let text = response.text;
-    let result;
+// app.post('/arrays', jsonParser, (req, res) => {
+//     let output = {};
+//     let response = req.body;
+//     let text = response.text;
+//     let result;
 
-    if (req.body.text == undefined) {
-        output["error"] = "Feed me some text you have to, padawan young you are. Hmmm.";
-    } else {
-        let lines = text.split('.');
-        let words = lines.map(e => e.split(" "));
-        let swapped = [];
-        for (let i = 0; i < words.length; i++) {
-            swapped.push()
-        }
-    }
-});
+//     if (req.body.text == undefined) {
+//         output["error"] = "Feed me some text you have to, padawan young you are. Hmmm.";
+//     } else {
+//         let lines = text.split('.');
+//         let words = lines.map(e => e.split(" "));
+//         let swapped = [];
+//         for (let i = 0; i < words.length; i++) {
+//             swapped.push()
+//         }
+//     }
+// });
 
 app.listen(PORT, () => {
     console.log(`The server is up and running on ${PORT}`);
