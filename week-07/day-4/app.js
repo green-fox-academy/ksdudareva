@@ -79,6 +79,19 @@ app.put('/posts/:id/downvote', (req, res) => {
     res.status(200).send(output);
 })
 
+app.delete('/posts/:id/', (req, res) => {
+    let output;
+    conn.query('DELETE FROM posts WHERE id = ?;', [req.params.id], function (err, rows) {
+        if (err) {
+            res.status(500).send('Database error');
+            return;
+        }
+    })
+    output = "Deleted!";
+    res.status(200).send(output);
+})
+
+
 app.listen(PORT, () => {
     console.log(`The server is up and running on ${PORT}`);
 });
