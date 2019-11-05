@@ -4,5 +4,19 @@
 //   Try to solve this two different ways.
 //   hint: take a look at the button attributes
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button
-   
 
+
+let btn = document.querySelector('button');
+
+// btn.addEventListener('click', function(){
+//     console.log(event.timeStamp);
+//     btn.disabled = true; 
+// })
+
+let count = 0;
+
+btn.addEventListener('click', function(){
+    if (count == 0) {
+        console.log(event.timeStamp);
+        count++;
+    }});
