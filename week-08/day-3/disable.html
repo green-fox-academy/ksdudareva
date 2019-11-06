@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Disable Buttons</title>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <div id="pet">
+        <p>What is your favorite pet?</p>
+        <label for="Dog">Dog</label>
+        <input type="radio" name="animal" id="Dog" value="Dog">
+        <label for="Cat">Cat</label>
+        <input type="radio" name="animal" id="Cat" value="Cat">
+        <label for="Fish">Viktor the goldfish</label>
+        <input type="radio" name="animal" id="Fish" value="Viktor the goldfish">
+    </div>
+    <div id="catFacts">
+        <p>Do you want to sign up for cat facts?</p>
+        <label for="yes">Yes</label>
+        <input type="radio" name="catfacts" id="yes" value="yes">
+        <label for="no">No</label>
+        <input type="radio" name="catfacts" id="no" value="no">
+    </div>
+    <div id="buttons">
+        <input type="button" name="lovecats" id="lovecats" value="I love cats" disabled>
+        <input type="button" name="signup" id="signup" value="Sign Up" disabled>
+    </div>
+
+    <script>
+        let dog = document.getElementById("Dog");
+        let cat = document.getElementById("Cat");
+        let fish = document.getElementById("Fish");
+        let signup = document.getElementById("signup");
+        let iLoveCats = document.getElementById("lovecats");
+        let yes = document.getElementById("yes");
+        let no = document.getElementById("no");
+        let pets = document.getElementById("pet");
+        let catFacts = document.getElementById("catFacts");
+
+        function factButton() {
+            if (yes.checked) {
+                iLoveCats.disabled = false;
+            } 
+            else {
+                iLoveCats.disabled = true;
+            }
+        }
+
+        function chooseViktor() {
+            if (fish.checked && no.checked) {
+                signup.disabled = false;
+                signup.addEventListener('click', fishFacts);
+            } 
+            else if (dog.checked || cat.checked) {
+                signup.disabled = false;
+            } 
+            else {
+                signup.disabled = true;
+            }
+        }
+
+        function kittyFacts() {
+            alert("Thank you, you've successfully signed up for cat facts");
+        }
+        function fishFacts() {
+            alert("Sigh, we still added you to the cat facts list");
+        }
+
+        catFacts.addEventListener('click', factButton);
+        iLoveCats.addEventListener('click', kittyFacts);
+        document.body.addEventListener('click', chooseViktor);
+
+    </script>
+</body>
+
+</html>
