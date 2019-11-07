@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button>Hit it</button>
+    </div>
+
+    <script>
+        const jokesURL = 'http://api.icndb.com/jokes/random';
+        let btn = document.querySelector('button');
+
+
+        function showJokes() {
+            fetch(jokesURL)
+                .then(response => response.json())
+                .then(myJson => {
+                    let paragraph = document.createElement('p');
+                    let body = document.querySelector('body');
+                    body.appendChild(paragraph);
+                    paragraph.innerText = myJson['value'].joke;
+                }).catch(console.log('error'));
+        }
+
+        btn.addEventListener('click', showJokes);
+
+    </script>
+</body>
+
+</html>
