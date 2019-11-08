@@ -3,8 +3,6 @@ const mysql = require('mysql');
 const path = require('path');
 const databaseName = "reddit";
 const tableName = "posts";
-const bodyParser = require('body-parser');
-var jsonParser = bodyParser.json();
 
 const app = express();
 const PORT = 8080;
@@ -37,45 +35,52 @@ app.get('/posts', (req, res) => {
             res.status(500).send('Database error');
             return;
         }
-    })
-    output = { "posts": rows };
-    res.status(200).send(output);
+
+        output = { "posts": rows };
+        res.status(200).send(output);
+    });
+
 });
 
-app.post('/posts', jsonParser, (req, res) => {
-    conn.query('INSERT INTO posts (title, url) VALUES ("' + req.body.title + '", "' + req.body.url + '");', function (err, rows) {
+app.post('/posts', (req, res) => {
+    conn.query('INSERT INTO posts (title, url) VALUES (?,?);',
+        [req.body.title, req.body.url], function (err, rows) {
         if (err) {
             res.status(500).send('Database error');
             return;
         }
-        conn.query('SELECT * FROM POSTS WHERE id =?;', [rows.insertId], function (err, newRow) {
+        conn.query('SELECT * FROM posts WHERE id =?;', [rows.insertId], function (err, newRow) {
             if (err) {
                 res.status(500).send('Database error');
                 return;
             }
-            output = { "posts": newRow };
+            output = newRow;
             res.status(200).send(output);
         });
     })
 });
 
 app.put('/posts/:id/upvote', (req, res) => {
-    let output;
-    conn.query('UPDATE posts SET score = score + 1 WHERE id = ?;', [req.params.id], function (err, rows) {
+    conn.query('UPDATE posts SET score = score + 1 WHERE id = ?;', [req.params.id], async function (err, rows) {
         if (err) {
             res.status(500).send('Database error');
             return;
         }
-        conn.query('SELECT * FROM POSTS WHERE id =?;', [req.params.id], function (err, newRow) {
-            if (err) {
-                res.status(500).send('Database error');
-                return;
-            }
-            output = { "posts": newRow };
-            res.status(200).send(output);
-        });
+        let post = await getPostById(req.params.id);
+        res.status(200).send(post);
     })
-})
+});
+
+function getPostById(id) {
+    return new Promise((resolve, reject) => {
+        conn.query('SELECT * FROM posts WHERE id =?;', [id], function (err, newRow) {
+            if (err) {
+                reject(err);
+            }
+            resolve(newRow);
+        });
+    });
+}
 
 // select * from table where id = ? & name = ?, [4, 'aboud'], (err, rows) // SQL injection
 
@@ -86,7 +91,7 @@ app.put('/posts/:id/downvote', (req, res) => {
             res.status(500).send('Database error');
             return;
         }
-        conn.query('SELECT * FROM POSTS WHERE id =?;', [req.params.id], function (err, newRow) {
+        conn.query('SELECT * FROM posts WHERE id =?;', [req.params.id], function (err, newRow) {
             if (err) {
                 res.status(500).send('Database error');
                 return;
