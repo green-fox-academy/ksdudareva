@@ -98,31 +98,43 @@ app.put('/posts/:id/downvote', (req, res) => {
 })
 
 //simple delete
-app.delete('/posts/:id/', (req, res) => {
-    conn.query('DELETE FROM posts WHERE id = ?;', [req.params.id], function (err, rows) {
-        if (err) {
-            res.status(500).send('Database error');
-            return;
-        }
-    })
-    output = "Deleted!";
-    res.status(200).send(output);
-})
+// app.delete('/posts/:id/', (req, res) => {
+//     conn.query('DELETE FROM posts WHERE id = ?;', [req.params.id], function (err, rows) {
+//         if (err) {
+//             res.status(500).send('Database error');
+//             return;
+//         }
+//     })
+//     output = "Deleted!";
+//     res.status(200).send(output);
+// })
 
 //trying to save to the deleted table
 
 app.delete('/posts/:id/', (req, res) => {
-    conn.query('', [req.params.id], function (err, rows) {
+    conn.query('INSERT INTO deleted SELECT * FROM posts WHERE id = ?', [req.params.id], function (err, rows) {
         if (err) {
             res.status(500).send('Database error');
             return;
         }
+        conn.query('DELETE FROM posts WHERE id = ?;', [req.params.id], function (err, rows) {
+            if (err) {
+                res.status(500).send('Database error');
+                return;
+            }
+            conn.query('SELECT * FROM deleted WHERE id =?;', [req.params.id], function (err, newRow) {
+                if (err) {
+                    res.status(500).send('Database error');
+                    return;
+                }
+                output = { "posts": newRow };
+                res.status(200).send(output);
+            });
+        })
     })
-    output = "Deleted!";
-    res.status(200).send(output);
 })
 
-
+//insert into deleted select * from posts where id=3;
 
 app.listen(PORT, () => {
     console.log(`The server is up and running on ${PORT}`);
