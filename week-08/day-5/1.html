@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: minmax(200px, auto);
+            grid-gap: 10px;
+            background-color: violet;
+            padding: 10px;
+        }
+
+        .left{
+            grid-column: 1 / 2;
+            background-color: rgb(255, 255, 124);
+        }
+
+        .middle{
+            grid-column: 2 / 5;
+            background-color: rgb(201, 250, 128);
+        }
+
+        .right{
+            grid-column: 5 /6;
+            background-color: rgb(255, 255, 124);
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id='container'>
+        <div class="left">  </div>
+        <div class="middle">  </div>
+        <div class="right"> </div>
+    </div>
+</body>
+
+</html>

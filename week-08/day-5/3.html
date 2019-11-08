@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            width: 800px;
+            height: 900px;
+            background-color: white;
+            margin: auto;
+
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(10, 100px);
+            grid-gap: 10px;
+        }
+
+        .purple {
+            grid-column: 1/13;
+            background-color: violet;
+            grid-row: 1/2;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-gap: 10px;
+        }
+
+        .blue1 {
+            background-color: rgb(143, 237, 253);
+            grid-column: 2/4;
+            grid-row: 2/5;
+        }
+
+        .blue2 {
+            background-color: rgb(143, 237, 253);
+            grid-column: 4/6;
+            grid-row: 2/5;
+        }
+
+        .blue3 {
+            background-color: rgb(143, 237, 253);
+            grid-column: 6/8;
+            grid-row: 2/5;
+        }
+
+        .blue4 {
+            background-color: rgb(143, 237, 253);
+            grid-column: 8/10;
+            grid-row: 2/5;
+        }
+
+        .green {
+            background-color: rgb(201, 250, 128);
+            grid-column: 2/6;
+            grid-row: 2/6;
+        }
+
+        .yellow {
+            grid-row: 2/6;
+            grid-column: 6/12;
+            background-color: rgb(255, 255, 124);
+        }
+
+        .grey {
+            grid-column: 2/12;
+            background-color: lightgrey;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id='container'>
+        <div class="purple">
+            <div class="blue1"> </div>
+            <div class="blue2"> </div>
+            <div class="blue3"> </div>
+            <div class="blue4"> </div>
+        </div>
+        <div class="yellow"> </div>
+        <div class="green"> </div>
+        <div class="grey"> </div>
+    </div>
+</body>
+
+</html>
