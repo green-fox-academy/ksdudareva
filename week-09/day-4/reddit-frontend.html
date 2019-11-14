@@ -5,115 +5,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>REDDIT</title>
-
-    <style>
-        @import url('http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext');
-
-        body {
-            padding: 0;
-            margin: 0;
-            background-color: #eeeeee;
-            font-family: Lato;
-        }
-
-        header {
-            background-image: url(https://spotlight.it-notes.ru/wp-content/uploads/2018/11/d46ff2b67b098bcf915398010d9e3e61.jpg);
-            height: 200px;
-            background-position: center;
-        }
-
-        header h2 {
-            color: azure;
-            margin: 0;
-            text-align: center;
-            padding: 75px;
-            letter-spacing: 50px;
-            font-size: 300%;
-            font-weight: lighter;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(6, 1fr);
-            grid-gap: 10px;
-            margin: 15px 10px;
-        }
-
-        main {
-            grid-column: 1/3;
-            grid-row: 1/6;
-            background-color: #ffffff;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-auto-rows: minmax(75px, auto);
-            border-radius: 3px;
-        }
-
-        aside {
-            grid-column: 3/4;
-            grid-row: 1/3;
-            background-color: #f5f5f5;
-        }
-
-        .submit {
-            background-color: #4aa3df;
-            color: azure;
-            outline: none;
-            font-size: 15px;
-            margin: 0;
-            padding: 0;
-            letter-spacing:3px;
-            height: 50px;
-            width: 100%;
-            border-radius: 3px;
-        }
-        
-        .about {
-            display: flex;
-            align-items: center;
-            background-color: #fbfbfb;
-            padding: 0;
-            height: 50px;
-            margin: 5px 0;
-            border-radius: 3px;
-        }
-
-        h3 {
-            margin: 10px; 
-            align-self: center;
-            color: #555555;
-        }
-
-        .info {
-            margin: 10px; 
-            border-radius: 3px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>Reddit</title>
 </head>
 
 <body>
     <header>
-        <h2>REDDIT</h2>
+        <h2>SPACE</h2>
     </header>
     <div class='grid'>
         <main>
-        
+                        <div class="card-box">
+                          <div class="scoring">
+                            <div class="up-Arrow">
+                              <a><button></button></a>
+                            </div>
+                            <div class="score">
+                              <h3>609</h3>
+                            </div>
+                            <div class="down-Arrow">
+                              <a><button></button></a>
+                            </div>
+                          </div>
+                          <div class="post ">
+                            <div class="title ">
+                              <h2>Aboud did this</h2>
+                            </div>
+                            <div class="text ">
+                              <h3>https://9gag.com/gag/aKd7x0Q</h3>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="card-box ">
+                                <div class="scoring ">
+                                  <div class="up-Arrow">
+                                    <a><button></button></a>
+                                  </div>
+                                  <div class="score">
+                                    <h3>609</h3>
+                                  </div>
+                                  <div class="down-Arrow">
+                                    <a><button></button></a>
+                                  </div>
+                                </div>
+                                <div class="post ">
+                                  <div class="title ">
+                                    <h2>This too</h2>
+                                  </div>
+                                  <div class="text ">
+                                    <h3>https://9gag.com/gag/aKd7x0Q</h3>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="card-box ">
+                                    <div class="scoring ">
+                                      <div class="up-Arrow">
+                                        <a><button></button></a>
+                                      </div>
+                                      <div class="score">
+                                        <h3>609</h3>
+                                      </div>
+                                      <div class="down-Arrow">
+                                        <a><button></button></a>
+                                      </div>
+                                    </div>
+                                    <div class="post ">
+                                      <div class="title ">
+                                        <h2>More posts</h2>
+                                      </div>
+                                      <div class="text ">
+                                        <h3>https://9gag.com/gag/aKd7x0Q</h3>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="card-box ">
+                                        <div class="scoring ">
+                                          <div class="up-Arrow">
+                                            <a><button></button></a>
+                                          </div>
+                                          <div class="score">
+                                            <h3>609</h3>
+                                          </div>
+                                          <div class="down-Arrow">
+                                            <a><button></button></a>
+                                          </div>
+                                        </div>
+                                        <div class="post ">
+                                          <div class="title ">
+                                            <h2>This is how I roll</h2>
+                                          </div>
+                                          <div class="text ">
+                                            <h3>https://9gag.com/gag/aKd7x0Q</h3>
+                                          </div>
+                                        </div>
+                                      </div>
         </main>
         <aside>
             <button class='submit'>SUBMIT A NEW POST</button>
-            <div class='about'><h3>ABOUT <a href="localhost3000/about">r/space</a> </h3></div>
+            <div class='about'>
+                <h3>ABOUT <a href="localhost3000/about">r/space</a> </h3>
+            </div>
             <div class='info'>
-                    <h4>Share & discuss informative content on:</h4>
-                    <ul>
-                      <li>Astrophysics</li>
-                      <li>Cosmology</li>
-                      <li>Space Exploration</li>
-                      <li>Planetary Science</li>
-                      <li>Astrobiology</li>
-                    </ul>
+                <h4>Share & discuss informative content on:</h4>
+                <ul>
+                    <li>Astrophysics</li>
+                    <li>Cosmology</li>
+                    <li>Space Exploration</li>
+                    <li>Planetary Science</li>
+                    <li>Astrobiology</li>
+                </ul>
             </div>
         </aside>
     </div>
